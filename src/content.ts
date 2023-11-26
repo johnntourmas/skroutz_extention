@@ -25,15 +25,15 @@ function getInputById(inputId: string): HTMLInputElement | null {
 function checkCheckboxOnPageLoad() {
     // Function to repeatedly check for the checkbox element
     const checkForCheckbox = () => {
-        const checkbox = findInputIdByLabel("Τελική τιμή", '.personalization-settings .toggle-switch-label') as HTMLInputElement;
+        const checkboxFinalPrice = findInputIdByLabel("Τελική τιμή", '.personalization-settings .toggle-switch-label') as HTMLInputElement;
         const availabilityButton = getInputById("availability-now");
   
         // Check the checkbox if it exists
-        if (checkbox && !checkbox.checked) {
-            checkbox.click();;
+        if (checkboxFinalPrice && !checkboxFinalPrice.checked) {
+            checkboxFinalPrice.click();;
         } else {
            // If the elements are not found, retry after a short delay
-           setTimeout(checkForCheckbox, 3000); // Adjust the delay as needed
+           setTimeout(checkForCheckbox, 1000); // Adjust the delay as needed
         }
 
         if (availabilityButton && !availabilityButton.checked) {
