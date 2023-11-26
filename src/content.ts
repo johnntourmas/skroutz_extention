@@ -27,13 +27,10 @@ function checkCheckboxOnPageLoad() {
     const checkForCheckbox = () => {
         const checkbox = findInputIdByLabel("Τελική τιμή", '.personalization-settings .toggle-switch-label') as HTMLInputElement;
         const availabilityButton = getInputById("availability-now");
-        console.log(availabilityButton);
   
         // Check the checkbox if it exists
         if (checkbox && !checkbox.checked) {
             checkbox.click();;
-           // Set an interval to periodically recheck the checkbox
-           console.log('Checkbox checked on page load.');
         } else {
            // If the elements are not found, retry after a short delay
            setTimeout(checkForCheckbox, 3000); // Adjust the delay as needed
@@ -41,7 +38,6 @@ function checkCheckboxOnPageLoad() {
 
         if (availabilityButton && !availabilityButton.checked) {
           availabilityButton.click();
-          console.log('availabilityButton checked on page load.');
         } else {
           // If the elements are not found, retry after a short delay
           setTimeout(checkForCheckbox, 1000); // Adjust the delay as needed
