@@ -4,7 +4,7 @@
     "description": "Base Level Extension",
     "version": "1.0",
     "action": {
-      "default_icon": "src/images/hello_extensions.png"
+      "default_icon": "src/images/skroutz.png"
     },
     "content_scripts": [
       {
